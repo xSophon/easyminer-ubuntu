@@ -1,6 +1,10 @@
 # easyminer-ubuntu
 集成了显卡驱动和挖矿软件的ubuntu挖矿镜像说明
 
+# img镜像下载
+https://share.weiyun.com/5qjQfaf
+文件有点大，用大于等于16G的u盘/SSD刻录即可。ubuntu下用dd命令可以直接刻录，具体方法自己百度。windows下用什么刻录我不知道，自己想办法。刻录以后直接能用。
+
 # 已经预装的软件说明
 - Nvidia驱动与cuda
 - AMD挖矿驱动
@@ -42,6 +46,8 @@ screen -dr easyminer
 # 用docker方式启动btm挖矿，以下为分离0,1,2,3,4,5这5张gpu用于挖btm的案例
 NV_GPU=0,1,2,3,4,5 nvidia-docker run -v /home/easyminer/easyminer-ubuntu/btm-miner-1.0:/miner -ti -rm nvidia/cuda sh /miner/run.sh
 ```
+> 为什么要用docker，因为btm的挖矿软件很吃cpu，要i5以上的cpu才能保证6卡不丢算力，所以如果单机有6卡8卡12卡的同学可以用docker分离2-4张gpu来挖btm，其余的继续挖eth，不浪费卡和算力。
+> 另外1070，1080,1080ti可以通过多开的方式来增加少许算力。比如1080ti开一个挖矿软件挖矿的时候是170算力，但是开两个进程挖矿的时候每个进程会有130+算力，也就是说80ti实际上btm算力可以达到270
 
 - eth:
   - 修改钱包地址，通过编辑`~/easyminer-ubuntu/claymore_ethminer/mine.sh`中最后一行的eth地址实现，这是Claymore原版挖矿软件，其他参数可以参考官方说明。
