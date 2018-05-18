@@ -31,18 +31,6 @@ sudo dd bs=10M if=/你的img文件路径 of=/dev/sdb
 - teamviewer: 不习惯ssh的可以用teamviewer进行远程
 - BTM挖矿软件，ETH的Claymore原版挖矿软件
 
-# 下载easyminer-ubuntu
-```
-git clone https://github.com/xSophon/easyminer-ubuntu
-cd easyminer-ubuntu
-```
-
-# 更新easyminer-ubuntu
-```
-cd ~/easyminer-ubuntu
-git pull
-```
-
 # ubuntu基本命令
 - vim编辑器刚打开时候不是编辑模式，键盘敲i进入编辑模式，编辑结束以后按esc退出编辑模式，然后:wq保存退出。
 
