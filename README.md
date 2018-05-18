@@ -71,12 +71,16 @@ sudo NV_GPU=0,1,2,3,4,5 nvidia-docker run -v /home/easyminer/easyminer-ubuntu/bt
 - eth:
   - 修改钱包地址，通过编辑`~/easyminer-ubuntu/claymore_ethminer/mine.sh`中最后一行的eth地址实现，这是Claymore原版挖矿软件，其他参数可以参考官方说明。
 
-- N卡超频和风扇情况复杂，请参考独立文章
-这里只能简单说一下：开机自动超频调风扇请参考，`~/.config/autostart/`下面的两个`.sh`文件，里面改超频和风扇数据。在能成功生效前，你需要无显示器启动且用ssh登录计算机。
+- N卡超频和风扇情况复杂，这里只能简单说一下，如果遇到自己情况不符合的部分，希望自己解决。笔者实践下列步骤的时候是不接显示器启动且用ssh登录计算机。接显示器的时候会调用到集显，往往会导致xconfig自动生成的配置文件无效。
 ```
+# 首先你需要运行nvidia-xconfig来帮你自动生成一个/etc/X11/xorg.conf，这个文件如果没做好，会导致开机无法进桌面等问题。n卡要超频改风扇需要把coolbits设置为28
 sudo nvidia-xconfig -a --cool-bits=28 --allow-empty-initial-configuration
+# 好，如果现在这个文件是自动生成了。可以用sudo vim /etc/X11/xorg.conf自己欣赏一下里面的内容。然后重启以后再看看这个文件与重启前是否有变化，如果发现跟重启前一样说明搞定了 （注意如果这时候你在layout里看见一个关于集显的内容（Inactive ... Intel之类的）,最好把这一行删掉。）
 ```
-然后重启。就这样。
+
+开机自动超频调风扇命令请参考，`~/.config/autostart/`下面的两个`.sh`文件，里面改超频和风扇数据。
+
+就这样。
 
 eth:
 0x1c8067528a3ccd5f2c756eb5f648d7f2ce96f633
