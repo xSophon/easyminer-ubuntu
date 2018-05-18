@@ -1,5 +1,5 @@
 # easyminer-ubuntu
-集成了显卡驱动和挖矿软件的ubuntu挖矿镜像说明
+集成了显卡驱动和挖矿软件的ubuntu挖矿镜像说明。**系统的用户名密码都是:easyminer**
 
 # img镜像下载
 https://share.weiyun.com/5qjQfaf
