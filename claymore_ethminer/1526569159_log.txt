@@ -1,0 +1,30 @@
+22:59:19:426	ef3a9740	Check and remove old log files...
+22:59:19:426	ef3a9740	args: -epool eth-eu1.nanopool.org:9999 -ewal 0x1c8067528a3ccd5f2c756eb5f648d7f2ce96f633.default/emptyset110@gmail.com -epsw x -mode 1 -ftime 10 -minspeed 140 
+22:59:19:426	ef3a9740	
+22:59:19:426	ef3a9740	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+22:59:19:426	ef3a9740	บ                Claymore's Dual GPU Miner - v11.6               บ
+22:59:19:426	ef3a9740	บ              ETH + DCR/SIA/LBC/PASC/BLAKE2S/KECCAK             บ
+22:59:19:426	ef3a9740	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+22:59:19:426	ef3a9740	
+22:59:19:426	ef3a9740	b571 
+22:59:19:626	ef3a9740	ETH: 1 pool is specified
+22:59:19:627	ef3a9740	Main Ethereum pool is eth-eu1.nanopool.org:9999
+22:59:19:826	ef3a9740	OpenCL platform: NVIDIA CUDA
+22:59:19:826	ef3a9740	AMD OpenCL platform not found 
+22:59:19:891	ef3a9740	CUDA initializing...
+
+22:59:19:891	ef3a9740	NVIDIA Cards available: 6 
+22:59:19:891	ef3a9740	CUDA Driver Version/Runtime Version: 9.1/8.0
+22:59:19:922	ef3a9740	GPU #0: P106-100, 6080 MB available, 10 compute units, capability: 6.1  (pci bus 1:0:0)
+
+22:59:19:924	ef3a9740	GPU #1: P106-100, 6080 MB available, 10 compute units, capability: 6.1  (pci bus 2:0:0)
+
+22:59:19:925	ef3a9740	GPU #2: P106-100, 6080 MB available, 10 compute units, capability: 6.1  (pci bus 3:0:0)
+
+22:59:19:926	ef3a9740	GPU #3: P106-100, 6080 MB available, 10 compute units, capability: 6.1  (pci bus 5:0:0)
+
+22:59:19:933	ef3a9740	GPU #4: P106-100, 6080 MB available, 10 compute units, capability: 6.1  (pci bus 6:0:0)
+
+22:59:19:934	ef3a9740	GPU #5: P106-100, 6080 MB available, 10 compute units, capability: 6.1  (pci bus 7:0:0)
+
+22:59:19:934	ef3a9740	Total cards: 6 

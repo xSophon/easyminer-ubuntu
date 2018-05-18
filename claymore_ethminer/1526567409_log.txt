@@ -1,0 +1,91 @@
+22:30:09:375	6245a740	Check and remove old log files...
+22:30:09:375	6245a740	args: -epool eth-eu1.nanopool.org:9999 -ewal 0x1c8067528a3ccd5f2c756eb5f648d7f2ce96f633.default/emptyset110@gmail.com -epsw x -mode 1 -ftime 10 -minspeed 140 
+22:30:09:375	6245a740	
+22:30:09:375	6245a740	ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออป
+22:30:09:375	6245a740	บ                Claymore's Dual GPU Miner - v11.6               บ
+22:30:09:375	6245a740	บ              ETH + DCR/SIA/LBC/PASC/BLAKE2S/KECCAK             บ
+22:30:09:375	6245a740	ศออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ
+22:30:09:375	6245a740	
+22:30:09:375	6245a740	b571 
+22:30:09:576	6245a740	ETH: 1 pool is specified
+22:30:09:576	6245a740	Main Ethereum pool is eth-eu1.nanopool.org:9999
+22:30:13:826	6245a740	OpenCL platform: NVIDIA CUDA
+22:30:13:826	6245a740	AMD OpenCL platform not found 
+22:30:14:183	6245a740	CUDA initializing...
+
+22:30:14:183	6245a740	NVIDIA Cards available: 6 
+22:30:14:183	6245a740	CUDA Driver Version/Runtime Version: 9.1/8.0
+22:30:14:208	6245a740	GPU #0: P106-100, 6080 MB available, 10 compute units, capability: 6.1  (pci bus 1:0:0)
+
+22:30:14:233	6245a740	GPU #1: P106-100, 6080 MB available, 10 compute units, capability: 6.1  (pci bus 2:0:0)
+
+22:30:14:261	6245a740	GPU #2: P106-100, 6080 MB available, 10 compute units, capability: 6.1  (pci bus 3:0:0)
+
+22:30:14:262	6245a740	GPU #3: P106-100, 6080 MB available, 10 compute units, capability: 6.1  (pci bus 5:0:0)
+
+22:30:14:264	6245a740	GPU #4: P106-100, 6080 MB available, 10 compute units, capability: 6.1  (pci bus 6:0:0)
+
+22:30:14:267	6245a740	GPU #5: P106-100, 6080 MB available, 10 compute units, capability: 6.1  (pci bus 7:0:0)
+
+22:30:14:267	6245a740	Total cards: 6 
+22:30:14:669	6245a740	
+You can use "+" and "-" keys to achieve best ETH speed, see "FINE TUNING" section in Readme for details.
+
+22:30:15:669	6245a740	No AMD cards in the list, ADL library will not be used.
+22:30:15:671	6245a740	NVML version: 9.390.48
+22:30:17:843	ee7f4700	ETH: Stratum - connecting to 'eth-eu1.nanopool.org' <213.32.29.168> port 9999 (unsecure)
+22:30:17:936	6245a740	ETHEREUM-ONLY MINING MODE ENABLED (-mode 1)
+22:30:17:936	6245a740	ETH: eth-proxy stratum mode
+22:30:17:936	6245a740	Watchdog enabled
+22:30:17:936	6245a740	Remote management (READ-ONLY MODE) is enabled on port 3333
+22:30:17:936	6245a740	
+22:30:18:154	ee7f4700	sent: {"worker": "eth1.0", "jsonrpc": "2.0", "params": ["0x1c8067528a3ccd5f2c756eb5f648d7f2ce96f633.default/emptyset110@gmail.com", "x"], "id": 2, "method": "eth_submitLogin"}
+
+22:30:18:154	ee7f4700	ETH: Stratum - Connected (eth-eu1.nanopool.org:9999) (unsecure)
+22:30:18:476	ee7f4700	buf: {"jsonrpc":"2.0","id":2,"result":true}
+
+22:30:18:476	ee7f4700	ETH: Authorized
+22:30:18:477	ee7f4700	sent: {"worker": "", "jsonrpc": "2.0", "params": [], "id": 3, "method": "eth_getWork"}
+
+22:30:19:808	ee7f4700	buf: {"jsonrpc":"2.0","id":0,"result":["0xda52eb4696a9f0781b6f1785d05361a892e00a1fb2a1a0433d8a358cdc206af5","0xe6073b5528bd0132af704e709c5723848c28e74e1d250eff85fc89e916b8515e","0x000000006df37f675ef6eadf5ab9a2072d44268d97df837e6748956e5c6c2116"]}
+{"jsonrpc":"2.0","id":0,"result":["0xda52eb4696a9f0781b6f1785d05361a892e00a1fb2a1a0433d8a358cdc206af5","0xe6073b5528bd0132af704e709c5723848c28e74e1d250eff85fc89e916b8515e","0x000000006df37f675ef6eadf5ab9a2072d44268d97df837e6748956e5c6c2116"]}
+
+22:30:19:808	ee7f4700	remove first packet 243
+22:30:19:810	efff7700	Setting DAG epoch #187...
+22:30:22:806	efff7700	Setting DAG epoch #187 for GPU4
+22:30:22:806	efff7700	Create GPU buffer for GPU4
+22:30:22:806	f27fc700	Setting DAG epoch #187 for GPU2
+22:30:22:806	f27fc700	Create GPU buffer for GPU2
+22:30:22:806	f0ff9700	Setting DAG epoch #187 for GPU3
+22:30:22:806	f0ff9700	Create GPU buffer for GPU3
+22:30:22:806	eeff5700	Setting DAG epoch #187 for GPU5
+22:30:22:806	eeff5700	Create GPU buffer for GPU5
+22:30:22:806	f3fff700	Setting DAG epoch #187 for GPU0
+22:30:22:806	f3fff700	Create GPU buffer for GPU0
+22:30:22:806	f2ffd700	Setting DAG epoch #187 for GPU1
+22:30:22:807	f2ffd700	Create GPU buffer for GPU1
+22:30:23:770	ee7f4700	buf: {"jsonrpc":"2.0","id":0,"result":["0xc45813513bf465db3f4bd7f7a740bf7b89da62ac6018af7ff531d4537d05c555","0xe6073b5528bd0132af704e709c5723848c28e74e1d250eff85fc89e916b8515e","0x000000006df37f675ef6eadf5ab9a2072d44268d97df837e6748956e5c6c2116"]}
+
+22:30:23:770	ee7f4700	ETH: 05/17/18-22:30:23 - New job from eth-eu1.nanopool.org:9999
+22:30:23:770	ee7f4700	target: 0x000000006df37f67 (diff: 10000MH), epoch 187(2.46GB)
+22:30:23:770	ee7f4700	ETH - Total Speed: 0.000 Mh/s, Total Shares: 0, Rejected: 0, Time: 00:00
+22:30:23:770	ee7f4700	ETH: GPU0 0.000 Mh/s, GPU1 0.000 Mh/s, GPU2 0.000 Mh/s, GPU3 0.000 Mh/s, GPU4 0.000 Mh/s, GPU5 0.000 Mh/s
+22:30:29:809	ee7f4700	ETH: checking pool connection...
+22:30:29:809	ee7f4700	sent: {"worker": "", "jsonrpc": "2.0", "params": [], "id": 3, "method": "eth_getWork"}
+
+22:30:30:835	ee7f4700	buf: {"jsonrpc":"2.0","id":0,"result":["0xc45813513bf465db3f4bd7f7a740bf7b89da62ac6018af7ff531d4537d05c555","0xe6073b5528bd0132af704e709c5723848c28e74e1d250eff85fc89e916b8515e","0x000000006df37f675ef6eadf5ab9a2072d44268d97df837e6748956e5c6c2116"]}
+
+22:30:32:771	f0ff9700	GPU3 DAG creation time - 9722 ms
+22:30:32:771	f0ff9700	Setting DAG epoch #187 for GPU3 done
+22:30:32:782	f27fc700	GPU2 DAG creation time - 9733 ms
+22:30:32:783	f27fc700	Setting DAG epoch #187 for GPU2 done
+22:30:32:787	efff7700	GPU4 DAG creation time - 9738 ms
+22:30:32:787	efff7700	Setting DAG epoch #187 for GPU4 done
+22:30:32:801	eeff5700	GPU5 DAG creation time - 9754 ms
+22:30:32:802	eeff5700	Setting DAG epoch #187 for GPU5 done
+22:30:32:835	f2ffd700	GPU1 DAG creation time - 9776 ms
+22:30:32:835	f2ffd700	Setting DAG epoch #187 for GPU1 done
+22:30:33:293	f3fff700	GPU0 DAG creation time - 10056 ms
+22:30:33:293	f3fff700	Setting DAG epoch #187 for GPU0 done
+22:30:34:196	6245a740	Quit signal received...
+22:30:34:298	6245a740	Quit, please wait...
