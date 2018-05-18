@@ -1,12 +1,20 @@
 # easyminer-ubuntu
 集成了显卡驱动和挖矿软件的ubuntu挖矿镜像说明。**系统的用户名密码都是:easyminer**。Ubuntu矿工学院Q群：474604062。
 
-拒绝回答“××能不能挖”这种问题……你见过有哪个显卡挖矿软件是没有Linux版本的？特么驱动都装好了还问能不能挖，那我只能说：不能（手动微笑）。
-反正目前只往桌面上丢了eth和btm的挖矿软件，你想挖其他币种的自己下载挖矿软件就行了。什么？不会下载？哦…………………………
+拒绝回答“××能不能挖”这种问题……你见过有哪个显卡挖矿软件是没有Linux版本的？特么驱动都装好了显然是什么都能挖。想要开机自启动等方式请往下阅读。
 
 # img镜像下载
 https://share.weiyun.com/5qjQfaf
-文件有点大，用大于等于16G的u盘/SSD刻录即可。ubuntu下用dd命令可以直接刻录，具体方法自己百度。windows下用什么刻录我不知道，自己想办法。刻录以后直接能用。
+文件有点大，用大于等于16G的u盘/SSD刻录即可。ubuntu下用dd命令可以直接刻录。windows下用什么刻录我不知道，自己想办法。刻录以后直接能用。
+linux下可以用Ubuntu的安装盘引导进入“试用”：
+```
+# 用fdisk查看分区
+sudo fdisk -l
+
+# 比如发现16G的准备做系统的盘是/dev/sdb
+sudo dd bs=10M if=/你的img文件路径 of=/dev/sdb
+# 其中bs是指缓存大小，填大一点刻录得快一些。if理解为inputfile，也就是输入路径,of立即为outputfile，输出位置。也就是从if位置往of位置克隆
+```
 
 # 关于为什么要做镜像
 额。因为有些没有用过Linux的同学天天来烦我，心很累……即便写了CUDA的安装教程，安装驱动的时候总会有网络问题或者墙的问题导致各种各样问题。所以做成镜像自己刻盘去吧。在这个镜像不被篡改的前提下我对此系统（除了原版挖矿软件以外）安全无后门这件事情可以承担法律责任。放心使用。会用Ubuntu的当然也就不会下载这个镜像，可以自行安装，但是这份README也会给你一些启发。
@@ -41,6 +49,11 @@ sudo vim /etc/rc.local
 
 在桌面终端命令行或者ssh命令行中通过连接screen查看挖矿程序运行情况
 ```
+# 查看有哪些screen的session
+screen -ls
+# 如果开机以后发现没有叫easyminer的session，请参考上一步检查一下/etc/rc.local，应该是自动启动的脚本出了问题
+
+# 连接到名叫easyminer的session
 screen -dr easyminer
 ```
 
@@ -50,7 +63,7 @@ screen -dr easyminer
 
 ```
 # 用docker方式启动btm挖矿，以下为分离0,1,2,3,4,5这5张gpu用于挖btm的案例
-NV_GPU=0,1,2,3,4,5 nvidia-docker run -v /home/easyminer/easyminer-ubuntu/btm-miner-1.0:/miner -ti -rm nvidia/cuda sh /miner/run.sh
+sudo NV_GPU=0,1,2,3,4,5 nvidia-docker run -v /home/easyminer/easyminer-ubuntu/btm-miner-1.0:/miner -ti -rm nvidia/cuda sh /miner/run.sh
 ```
 > 为什么要用docker，因为btm的挖矿软件很吃cpu，要i5以上的cpu才能保证6卡不丢算力，所以如果单机有6卡8卡12卡的同学可以用docker分离2-4张gpu来挖btm，其余的继续挖eth，不浪费卡和算力。
 > 另外1070，1080,1080ti可以通过多开的方式来增加少许算力。比如1080ti开一个挖矿软件挖矿的时候是170算力，但是开两个进程挖矿的时候每个进程会有130+算力，也就是说80ti实际上btm算力可以达到270
